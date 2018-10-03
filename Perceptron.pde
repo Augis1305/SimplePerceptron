@@ -37,9 +37,14 @@ class Perceptron{
   }
   
   float guessY(float x) {
-    float m = weights[1] / weights[0];
-    float b = weights[2];
-    return m* x +b;
+    //float m = weights[1] / weights[0];
+    //float b = weights[2];
+    //return m* x +b;
+    float w0 = weights[0];
+    float w1 = weights[1];
+    float w2 = weights[2];
+
+    return -(w2 / w1) - (w0/w1) * x;
   }
   
 }

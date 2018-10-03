@@ -7,7 +7,7 @@ float f(float x){
 class Point{
   float x;
   float y;
-  float bias;
+  float bias =1;
   int label;
   
   Point(float x_, float y_){
@@ -22,7 +22,7 @@ class Point{
     
     float lineY = f(x);
         
-    if (x > lineY){
+    if (y > lineY){
       label = 1;
     } else {
       label = -1;
